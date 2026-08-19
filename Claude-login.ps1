@@ -2,8 +2,18 @@
 # Logt de Claude CLI (die je app en dagelijks onderzoek gebruiken) opnieuw in.
 # Opent een browser voor de inlog. Wordt aangeroepen door Claude-inloggen.bat.
 
-$exe = (Get-ChildItem "$env:LOCALAPPDATA\Packages\Claude_*\LocalCache\Roaming\Claude\claude-code\*\claude.exe" -ErrorAction SilentlyContinue |
-        Sort-Object FullName | Select-Object -Last 1).FullName
+# claude.exe zit op verschillende plekken (Store-versie vs. gewone installer)
+$paths = @(
+    "$env:LOCALAPPDATA\Packages\Claude_*\LocalCache\Roaming\Claude\claude-code\*\claude.exe",
+    "$env:LOCALAPPDATA\AnthropicClaude\app-*\claude.exe",
+    "$env:LOCALAPPDATA\AnthropicClaude\claude.exe",
+    "$env:LOCALAPPDATA\Programs\Claude\claude.exe"
+)
+$exe = $null
+foreach ($p in $paths) {
+    $m = Get-ChildItem $p -ErrorAction SilentlyContinue | Sort-Object LastWriteTime | Select-Object -Last 1
+    if ($m) { $exe = $m.FullName; break }
+}
 if (-not $exe) {
     $cmd = Get-Command claude -ErrorAction SilentlyContinue
     if ($cmd) { $exe = $cmd.Source }

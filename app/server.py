@@ -145,11 +145,22 @@ def get_opportunities():
 # Gebruikt dezelfde ingelogde Claude als het dagelijkse onderzoek.
 # ---------------------------------------------------------------------------
 def find_claude():
-    pat = os.path.join(os.environ.get('LOCALAPPDATA', ''), 'Packages', 'Claude_*',
-                       'LocalCache', 'Roaming', 'Claude', 'claude-code', '*', 'claude.exe')
-    matches = sorted(glob.glob(pat))
-    if matches:
-        return matches[-1]
+    # claude.exe zit op verschillende plekken, afhankelijk van hoe de Claude-app
+    # is geinstalleerd (Microsoft Store vs. gewone installer). Check ze allemaal.
+    la = os.environ.get('LOCALAPPDATA', '')
+    patterns = [
+        os.path.join(la, 'Packages', 'Claude_*', 'LocalCache', 'Roaming', 'Claude', 'claude-code', '*', 'claude.exe'),
+        os.path.join(la, 'AnthropicClaude', 'app-*', 'claude.exe'),
+        os.path.join(la, 'AnthropicClaude', 'claude.exe'),
+        os.path.join(la, 'Programs', 'Claude', 'claude.exe'),
+        os.path.join(os.environ.get('PROGRAMFILES', ''), 'Claude', 'claude.exe'),
+    ]
+    found = []
+    for p in patterns:
+        found.extend(glob.glob(p))
+    if found:
+        found.sort(key=lambda f: os.path.getmtime(f) if os.path.exists(f) else 0)
+        return found[-1]
     return shutil.which('claude')
 
 

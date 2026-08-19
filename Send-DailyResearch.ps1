@@ -53,8 +53,15 @@ function Send-TelegramChunked([string]$text) {
 }
 
 # --- Claude CLI vinden (pad verandert per versie, daarom met joker) ---
-$exe = Get-ChildItem "$env:LOCALAPPDATA\Packages\Claude_*\LocalCache\Roaming\Claude\claude-code\*\claude.exe" -ErrorAction SilentlyContinue |
-    Sort-Object FullName -Descending | Select-Object -First 1 -ExpandProperty FullName
+$exe = $null
+foreach ($p in @(
+    "$env:LOCALAPPDATA\Packages\Claude_*\LocalCache\Roaming\Claude\claude-code\*\claude.exe",
+    "$env:LOCALAPPDATA\AnthropicClaude\app-*\claude.exe",
+    "$env:LOCALAPPDATA\AnthropicClaude\claude.exe",
+    "$env:LOCALAPPDATA\Programs\Claude\claude.exe")) {
+    $m = Get-ChildItem $p -ErrorAction SilentlyContinue | Sort-Object LastWriteTime | Select-Object -Last 1
+    if ($m) { $exe = $m.FullName; break }
+}
 if (-not $exe) {
     $cmd = Get-Command claude -ErrorAction SilentlyContinue
     if ($cmd) { $exe = $cmd.Source }

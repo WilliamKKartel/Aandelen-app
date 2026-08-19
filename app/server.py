@@ -145,15 +145,15 @@ def get_opportunities():
 # Gebruikt dezelfde ingelogde Claude als het dagelijkse onderzoek.
 # ---------------------------------------------------------------------------
 def find_claude():
-    # claude.exe zit op verschillende plekken, afhankelijk van hoe de Claude-app
-    # is geinstalleerd (Microsoft Store vs. gewone installer). Check ze allemaal.
+    # De ECHTE Claude Code CLI zit altijd in een 'claude-code'-map. De losse
+    # claude.exe in AnthropicClaude is de chat-app-launcher (verkeerde) - die
+    # slaan we over. Een los geinstalleerde CLI (native installer / npm) staat
+    # op PATH en wordt via shutil.which gevonden.
     la = os.environ.get('LOCALAPPDATA', '')
+    ra = os.environ.get('APPDATA', '')
     patterns = [
         os.path.join(la, 'Packages', 'Claude_*', 'LocalCache', 'Roaming', 'Claude', 'claude-code', '*', 'claude.exe'),
-        os.path.join(la, 'AnthropicClaude', 'app-*', 'claude.exe'),
-        os.path.join(la, 'AnthropicClaude', 'claude.exe'),
-        os.path.join(la, 'Programs', 'Claude', 'claude.exe'),
-        os.path.join(os.environ.get('PROGRAMFILES', ''), 'Claude', 'claude.exe'),
+        os.path.join(ra, 'Claude', 'claude-code', '*', 'claude.exe'),
     ]
     found = []
     for p in patterns:

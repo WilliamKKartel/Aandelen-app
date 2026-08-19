@@ -2,12 +2,12 @@
 # Logt de Claude CLI (die je app en dagelijks onderzoek gebruiken) opnieuw in.
 # Opent een browser voor de inlog. Wordt aangeroepen door Claude-inloggen.bat.
 
-# claude.exe zit op verschillende plekken (Store-versie vs. gewone installer)
+# De ECHTE Claude Code CLI zit altijd in een 'claude-code'-map. De losse
+# claude.exe in AnthropicClaude is de chat-app-launcher (verkeerde). Een los
+# geinstalleerde CLI staat op PATH en wordt onderaan via Get-Command gevonden.
 $paths = @(
     "$env:LOCALAPPDATA\Packages\Claude_*\LocalCache\Roaming\Claude\claude-code\*\claude.exe",
-    "$env:LOCALAPPDATA\AnthropicClaude\app-*\claude.exe",
-    "$env:LOCALAPPDATA\AnthropicClaude\claude.exe",
-    "$env:LOCALAPPDATA\Programs\Claude\claude.exe"
+    "$env:APPDATA\Claude\claude-code\*\claude.exe"
 )
 $exe = $null
 foreach ($p in $paths) {

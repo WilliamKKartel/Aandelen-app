@@ -52,13 +52,13 @@ function Send-TelegramChunked([string]$text) {
     if ($text.Length -gt 0) { Send-Telegram $text }
 }
 
-# --- Claude CLI vinden (pad verandert per versie, daarom met joker) ---
+# --- Claude Code CLI vinden (de echte zit altijd in een 'claude-code'-map;
+#     de losse claude.exe in AnthropicClaude is de chat-app-launcher. Een los
+#     geinstalleerde CLI staat op PATH -> onderaan via Get-Command) ---
 $exe = $null
 foreach ($p in @(
     "$env:LOCALAPPDATA\Packages\Claude_*\LocalCache\Roaming\Claude\claude-code\*\claude.exe",
-    "$env:LOCALAPPDATA\AnthropicClaude\app-*\claude.exe",
-    "$env:LOCALAPPDATA\AnthropicClaude\claude.exe",
-    "$env:LOCALAPPDATA\Programs\Claude\claude.exe")) {
+    "$env:APPDATA\Claude\claude-code\*\claude.exe")) {
     $m = Get-ChildItem $p -ErrorAction SilentlyContinue | Sort-Object LastWriteTime | Select-Object -Last 1
     if ($m) { $exe = $m.FullName; break }
 }

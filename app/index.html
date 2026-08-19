@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mijn Beleggingen</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">
+          <svg class="rise" viewBox="0 0 40 24" fill="none" aria-hidden="true">
+            <polyline class="rise-line" points="3,20 11,14 17,16 24,9 30,11 37,3"
+              stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon class="rise-arrow" points="37,3 30.5,3.2 35.4,8.2" fill="currentColor"/>
+          </svg>
+          <span class="wk">WK</span>
+        </div>
+        <div class="brand-text">
+          <strong>Mijn Beleggingen</strong>
+          <span>lange termijn · kwaliteit</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-view="overzicht">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h6V4H4v9Zm0 7h6v-5H4v5Zm10 0h6V11h-6v9Zm0-16v5h6V4h-6Z"/></svg>
+          <span>Overzicht</span>
+        </button>
+        <button class="nav-item" data-view="meldingen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6-2-2v-4a5 5 0 0 0-4-4.9V5a1 1 0 1 0-2 0v.1A5 5 0 0 0 7 10v4l-2 2v1h14v-1Z"/></svg>
+          <span>Meldingen</span>
+          <span class="nav-badge" id="nav-badge" style="display:none"></span>
+        </button>
+        <button class="nav-item" data-view="historie">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 3a9 9 0 1 0 8.94 10.4l-1.98-.3A7 7 0 1 1 13 5v3l4-4-4-4v3Zm-1 4v6l4.9 2.9 1-1.72L14 12.3V7h-2Z"/></svg>
+          <span>Historie</span>
+        </button>
+        <button class="nav-item" data-view="patronen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2Zm-2 19a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-1h-4v1Z"/></svg>
+          <span>Patronen</span>
+        </button>
+        <button class="nav-item" data-view="nieuws">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4V5Zm2 3v2h8V8H6Zm0 4v2h8v-2H6Zm0 4v2h5v-2H6Zm10-8v8h2V8h-2Z"/></svg>
+          <span>Nieuws</span>
+        </button>
+        <button class="nav-item" data-view="kansen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8-1.5-1.5L13 12l-4-4-7 7 1 2Z"/></svg>
+          <span>Kansen</span>
+        </button>
+        <button class="nav-item" data-view="deepdive">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 0 3.5 10.9l4.8 4.8 1.4-1.4-4.8-4.8A6 6 0 0 0 10 4Zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"/></svg>
+          <span>Deep-dive</span>
+        </button>
+        <button class="nav-item" data-view="coach">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm4.5 3.5-6 2.2-2.2 6 6-2.2 2.2-6ZM12 11a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>
+          <span>Coach</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="disclaimer">
+          <strong>Onderzoek, geen koopadvies.</strong>
+          Je beslist en handelt altijd zelf in Saxo Investor. Spreid je inleg.
+        </div>
+        <a class="saxo-link" href="https://www.saxoinvestor.nl/investor" target="_blank" rel="noopener">Open Saxo Investor ↗</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 id="section-title">Overzicht</h1>
+          <p id="section-sub" class="section-sub"></p>
+        </div>
+        <div class="topbar-actions">
+          <span id="updated" class="updated"></span>
+          <button id="refresh" class="btn btn-ghost" title="Data opnieuw ophalen">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L8 6l4 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7Z"/></svg>
+            Ververs
+          </button>
+        </div>
+      </header>
+      <section id="view" class="view"></section>
+    </main>
+  </div>
+
+  <div id="modal-root"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

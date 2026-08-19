@@ -1,0 +1,20 @@
+# --- NIET delen: persoonlijke instellingen met geheimen ---
+# config.json bevat je Telegram-bot-token en chat-ID (als een wachtwoord!).
+# Iedereen gebruikt zijn eigen config.json (kopie van config.example.json).
+config.json
+
+# --- NIET delen: je persoonlijke data ---
+# portefeuille, historie, analyses, meldingen, notities, watchlist, patronen
+data/
+
+# --- Logs en lopende status (worden vanzelf aangemaakt) ---
+*.log
+state.json
+
+# --- Je persoonlijke koopbesluiten (het lege template blijft wel gedeeld) ---
+Koopbesluit *.txt
+Koopbesluiten/Koopbesluit *.txt
+
+# --- Windows / rommel ---
+Thumbs.db
+desktop.ini

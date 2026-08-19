@@ -1,0 +1,155 @@
+================================================================
+           KOOPBESLUIT - VUL ALLES IN VOOR JE KOOPT
+================================================================
+Werkwijze: kopieer dit bestand, hernoem het naar het aandeel
+(bijv. "Koopbesluit ASML.txt") en vul ALLES in. Kun je een vraag
+niet beantwoorden? Dan is het antwoord "nog niet kopen" - eerst
+uitzoeken. Bewaar het bestand; na een jaar leer je hier meer van
+dan van welk boek dan ook.
+
+----------------------------------------------------------------
+1. DE BASIS
+----------------------------------------------------------------
+Datum:
+Bedrijf + ticker:
+Beurs + valuta:
+Koers nu:
+Hoeveel wil ik investeren (EUR):
+Hoeveel % van mijn totale portefeuille is dat:
+   (meer dan 10%? -> STOP, te veel voor 1 aandeel)
+Koop ik in delen? (bijv. 3x een derde, met tussenpozen):
+
+----------------------------------------------------------------
+2. MIJN VERHAAL (het belangrijkste vak van allemaal)
+----------------------------------------------------------------
+Wat doet dit bedrijf, in mijn eigen woorden (2-3 zinnen, zo
+simpel dat een vriend het snapt):
+
+
+Waarom koop ik dit NU en niet gewoon een wereldwijde ETF?
+Wat weet of zie ik waardoor dit het beter gaat doen?
+
+
+Hoe lang ben ik van plan dit vast te houden:
+
+----------------------------------------------------------------
+3. DE DRIE KNOCK-OUTS (1x nee = niet kopen, klaar)
+----------------------------------------------------------------
+[ ] Ik begrijp echt hoe dit bedrijf geld verdient
+[ ] Als de koers laag staat: de reden is TIJDELIJK, niet
+    permanent. De reden is namelijk:
+
+[ ] Geen rode vlaggen in de boekhouding (geen eeuwige
+    "eenmalige kosten", geen fraudegeruchten)
+
+----------------------------------------------------------------
+4. DE 18-PUNTS CHECKLIST (per punt: OK / TWIJFEL / SLECHT + waarom)
+----------------------------------------------------------------
+Bronnen: macrotrends.net (cijfers 10 jaar), Yahoo Finance
+(Statistics + Analysis), openinsider.com (VS), jaarverslag.
+
+ 1. Moat - waarom stapt een klant niet over naar de concurrent?
+    Antwoord:
+ 2. Omzetgroei - groeide de omzet 5-10 jaar gestaag?
+    Cijfers:
+ 3. Vrije kasstroom - positief en meegroeiend?
+    Cijfers:
+ 4. ROIC - boven de 15%, jaar na jaar?
+    Cijfers:
+ 5. Marges - stabiel of stijgend over 10 jaar?
+    Cijfers:
+ 6. Schuld - nettoschuld onder 2-3x EBITDA?
+    Cijfers:
+ 7. Verwatering - aantal aandelen gelijk of dalend?
+    Cijfers:
+ 8. Waardering - P/E vs eigen 5-jaars gemiddelde en vs sector?
+    Cijfers:
+ 9. Management - hoe lang zit de CEO, maakt hij beloftes waar?
+    Antwoord:
+10. Insider-bezit - bezit management zelf veel aandelen,
+    kopen ze bij? (openinsider.com)
+    Antwoord:
+11. Verwachtingen - wat verwachten analisten al? Is die lat
+    haalbaar of moet alles perfect gaan? (Yahoo -> Analysis)
+    Antwoord:
+12. Klantconcentratie - hangt de omzet aan enkele grote klanten?
+    Antwoord:
+13. Terugkerende omzet - abonnementen/herhaalaankopen of steeds
+    opnieuw verkopen?
+    Antwoord:
+14. Conjunctuur - wat deed de omzet in 2008-2009 en 2020?
+    Kan ik daar tegen?
+    Antwoord:
+15. Kapitaalallocatie - wat doet management met de winst?
+    (inkoop op lage koersen = goed, dure overnames = slecht)
+    Antwoord:
+16. Sector - groeit de sector zelf, of wordt hij bedreigd
+    (bijv. door AI)? Wie is de disruptor hier?
+    Antwoord:
+17. Regelgeving/geopolitiek - afhankelijk van subsidies,
+    vergunningen, of kwetsbaar voor handelsoorlog?
+    Antwoord:
+18. Voor mij als NL-belegger - valutarisico? Dividend-
+    bronbelasting geregeld (W-8BEN bij VS-aandelen)?
+    Antwoord:
+
+SCORE: ..... / 18
+Onder de 13? -> Overslaan. Er komt altijd een nieuwe kans.
+
+----------------------------------------------------------------
+5. ADVOCAAT VAN DE DUIVEL (verplicht eerlijk invullen)
+----------------------------------------------------------------
+Iemand verkoopt mij deze aandelen. Wat weet of denkt die
+verkoper misschien dat ik niet zie?
+
+
+De 3 grootste risico's, in mijn eigen woorden:
+1.
+2.
+3.
+
+Wat is het slechtste realistische scenario en hoeveel verlies
+ik dan? Kan ik dat dragen zonder paniek?
+
+
+Stel de koers daalt morgen 30% zonder bedrijfsnieuws.
+Wat doe ik? (eerlijk!):
+
+
+----------------------------------------------------------------
+6. EMOTIE-CHECK
+----------------------------------------------------------------
+[ ] Ik koop NIET omdat hij hard gestegen is en ik bang ben iets
+    te missen (FOMO)
+[ ] Ik koop NIET alleen omdat iemand anders (Janneke, Buffett,
+    het ochtendrapport, een vriend) het kocht - ik heb het ZELF
+    onderzocht en snap het zelf
+[ ] Ik heb hier minimaal 2 nachten over geslapen
+[ ] Dit geld heb ik de komende 5+ jaar niet nodig
+
+----------------------------------------------------------------
+7. MIJN VERKOOPPLAN (nu al bepalen, niet pas bij paniek)
+----------------------------------------------------------------
+Ik verkoop ALLEEN als een van deze dingen gebeurt:
+1. (bijv: de moat breekt - concurrent X wint structureel klanten)
+2. (bijv: management doet iets dat ik niet meer vertrouw)
+3. (bijv: het aandeel wordt extreem overgewaardeerd, P/E > ...)
+
+Een koersdaling ZONDER bedrijfsnieuws is GEEN verkoopreden.
+
+Herbeoordeling gepland op (datum, bijv. bij volgende
+kwartaalcijfers):
+
+----------------------------------------------------------------
+8. ACHTERAF INVULLEN (na 6-12 maanden terugkijken)
+----------------------------------------------------------------
+Wat is er sindsdien gebeurd:
+
+Klopte mijn verhaal uit vak 2:
+
+Wat leer ik hiervan voor de volgende keer:
+
+================================================================
+Onderzoek, geen garantie. Spreiden, gefaseerd instappen,
+en bij twijfel: niet doen.
+================================================================

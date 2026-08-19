@@ -1,0 +1,29 @@
+{
+    "_uitleg": "Kopieer dit bestand naar config.json en vul je eigen Telegram-token + chat-ID in (zie README, Stap 1-3). Deel je eigen config.json NOOIT met anderen.",
+    "telegramBotToken": "VUL_HIER_JE_EIGEN_BOT_TOKEN_IN",
+    "telegramChatId": "VUL_HIER_JE_EIGEN_CHAT_ID_IN",
+    "wordpressSources": [
+        {
+            "key": "bbb",
+            "name": "Blondjes Beleggen Beter",
+            "api": "https://www.blondjesbeleggenbeter.nl/wp-json/wp/v2/posts?per_page=5&_fields=id,date,link,title,excerpt,content"
+        }
+    ],
+    "rssSources": [
+        {
+            "key": "jongbeleggen",
+            "name": "Jong Beleggen, de podcast",
+            "url": "https://www.omnycontent.com/d/playlist/61ee9ca4-a1b2-4660-9651-b2b70035edf5/4e37b0dc-83ba-4408-94e6-b2fe0084bc12/0c1603ec-eb40-4557-a908-b2fe0084bc3a/podcast.rss"
+        }
+    ],
+    "secFilers": [
+        { "name": "Warren Buffett (Berkshire Hathaway)", "cik": "1067983" },
+        { "name": "Bill Ackman (Pershing Square)", "cik": "1336528" }
+    ],
+    "portfolio": [],
+    "alertDailyDropPct": 5,
+    "alertBuyDropPct": 15,
+    "alertVolumeFactor": 2.5,
+    "benchmarkTicker": "VWRL.AS",
+    "benchmarkName": "Vanguard FTSE All-World (VWRL)"
+}
